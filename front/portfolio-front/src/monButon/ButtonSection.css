@@ -1,0 +1,18 @@
+/* ButtonSection.css */
+.botones {
+    background-color: rgb(21, 76, 94); /* Remplacez cette couleur par celle de votre choix */
+    padding: 20px; /* Espacement intérieur pour aérer la section */
+    border-radius: 8px; /* Coins arrondis optionnels */
+}
+
+.boton {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #2e1919; /* Couleur du texte */
+}
+
+.iconify {
+    margin-right: 10px; /* Espacement entre l'icône et le texte */
+}

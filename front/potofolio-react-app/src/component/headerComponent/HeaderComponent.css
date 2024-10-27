@@ -1,0 +1,81 @@
+.header {
+    background-color: #f0f4f8; /* Un ton plus doux pour un look professionnel */
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 3px solid #007BFF; /* Une ligne en bas pour séparer le header */
+}
+
+.header-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left; /* Aligner le texte à gauche pour plus de lisibilité */
+}
+
+.name {
+    font-size: 3em;
+    font-weight: 700;
+    margin: 0;
+    color: #002855; /* Couleur bleue sombre pour le nom */
+}
+
+.title {
+    font-size: 1.8em;
+    color: #0062CC; /* Un bleu plus clair pour le titre */
+    margin: 15px 0;
+}
+
+.introduction, .objective {
+    font-size: 1.2em;
+    color: #444; /* Couleur gris foncé pour un meilleur contraste */
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: #002855; /* Même bleu que le nom pour les sous-titres */
+    margin-top: 30px;
+    border-bottom: 2px solid #007BFF; /* Ligne sous les titres */
+    padding-bottom: 5px;
+}
+
+ul {
+    padding-left: 20px;
+    list-style-type: disc; /* Utilisation des puces pour une meilleure présentation des listes */
+}
+
+li {
+    font-size: 1.1em;
+    color: #333; /* Texte gris foncé */
+    margin-bottom: 10px; /* Espacement entre les éléments de la liste */
+}
+
+strong {
+    color: #0062CC; /* Mettre en avant les éléments importants */
+}
+
+@media screen and (max-width: 768px) {
+    .header-content {
+        padding: 0 15px; /* Réduire les marges pour les petits écrans */
+    }
+    
+    .name {
+        font-size: 2.2em; /* Ajuster la taille pour les petits écrans */
+    }
+
+    .title {
+        font-size: 1.5em;
+    }
+
+    .introduction, .objective {
+        font-size: 1.1em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+    ul {
+        padding-left: 15px;
+    }
+}

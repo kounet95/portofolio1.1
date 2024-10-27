@@ -1,0 +1,179 @@
+/* Conteneur principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden; /* Pour eviter le debordement */
+  }
+  
+  /* Section Profil Utilisateur et Competences */
+  .user-section {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    background-color: #324479; /* Couleur de fond légère pour la section utilisateur */
+    border-bottom: 2px solid #bb5353; /* Bordure légère */
+  }
+  
+  /* Conteneur pour le profil utilisateur et les compétences */
+  .user-content {
+    background-color: #bb5353;
+    display: flex;
+    flex: 1;
+    gap: 20px; /* Espace entre les sections */
+  }
+  
+  /* Section de gauche pour le profil utilisateur */
+  .left-section {
+    flex: 1;
+    background-color: #af2835; /* Fond blanc pour le profil utilisateur */
+    padding: 20px;
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  }
+
+  .right-section {
+    flex: 1;
+    position: relative; /* Nécessaire pour positionner le texte défilant */
+  }
+  
+  .scrolling-text {
+    flex: 1;
+    position: relative; /* Nécessaire pour positionner le texte défilant */
+    position: absolute;
+    bottom: 0; /* Positionne le texte en bas de la section */
+    left: 0;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: #36306b; /* Couleur de fond pour se distinguer */
+    padding: 10px 0;
+    box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+  }
+  
+  .scrolling-text {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: #e1adad; /* Couleur de fond pour se distinguer */
+    padding: 10px;
+    box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+  }
+  
+  .scrolling-text-item {
+    display: inline-block;
+    padding-right: 10px; /*  pour éviter le chevauchement */
+    font-size: 11px; /*  pour une meilleure lisibilité */
+    line-height: 10px; 
+  }
+  
+  @keyframes scroll {
+    from {
+      transform: translateX(100%); /* Commence à droite (en dehors de l'écran) */
+    }
+    to {
+      transform: translateX(-100%); /* Termine à gauche (en dehors de l'écran) */
+    }
+  }
+  
+  .scrolling-text {
+    animation: scroll 50s linear infinite; /* Augmenter la durée de l'animation pour une lecture complète */
+  }
+  .section-title {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  /* Section de droite pour les compétences en images */
+  .right-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #e0e0e0; /* Couleur de fond pour les compétences */
+    border-radius: 8px; /* Coins arrondis */
+  }
+  
+  /* Section de titre */
+  .section-title {
+    padding: 20px;
+    background-color: #333; /* Couleur de fond sombre pour le titre */
+    color: #fff; /* Couleur du texte en blanc */
+    text-align: center; /* Centrer le texte */
+  }
+  
+  /* Section de formulaire de contact */
+  .contact-section {
+    padding: 20px;
+    background-color: #ffffff; /* Fond blanc pour le formulaire */
+    border-top: 2px solid #ddd; /* Bordure légère en haut */
+  }
+  
+  /* Section footer */
+  .footer-section {
+    padding: 20px;
+    background-color: #333; /* Couleur de fond sombre pour le footer */
+    color: #fff; /* Couleur du texte en blanc */
+    text-align: center; /* Centrer le texte */
+  }
+  :root {
+    --main-color: #2b007a;
+    --secundary-color: #e4e2ea;
+    --cards: #d8ccff;
+  
+    --button-flat: #6a00ff;
+    --button-hover: #770fff;
+    --button-active: #6a00ff;
+    --border-color: #9d70ff;
+  
+    --text-bold-color: #2b007a;
+    --text-highligth: #770fff;
+  
+    --font-montserrat: 'Montserrat Variable', sans-serif;
+  
+    /* Couleurs de fond par section */
+    --bg-section-user: #f4f4f4;
+    --bg-section-competence: #d8ccff;
+    --bg-section-contact: #e4e2ea;
+    --bg-section-footer: #2b007a;
+  
+    /* Darkmode */
+    --bg-color-dark: #18181b;
+  }
+  
+  /* Application des couleurs de fond */
+  .user-section {
+    background-color: var(--bg-section-user);
+    padding: 20px;
+  }
+  
+  .competenceImage {
+    background-color: var(--bg-section-competence);
+    padding: 20px;
+  }
+  
+  .contact-section {
+    background-color: var(--bg-section-contact);
+    padding: 20px;
+  }
+  
+  .footer-section {
+    background-color: var(--bg-section-footer);
+    color: white;
+    padding: 20px;
+  }
+  
+  body {
+    background-color: var(--secundary-color);
+    font-family: var(--font-montserrat);
+  }
+  
+  .dark body {
+    background-color: var(--bg-color-dark);
+    color: var(--secundary-color);
+  }
+  

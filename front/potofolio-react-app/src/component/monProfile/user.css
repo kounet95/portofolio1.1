@@ -1,0 +1,47 @@
+/* Styles pour l'image utilisateur */
+.card-img-top {
+    width: 100%; /* L'image occupe toute la largeur de la carte */
+    height: auto; /* Garde le ratio d'aspect pour éviter la distorsion */
+    border-radius: 10px; /* Bordures arrondies pour un style plus moderne */
+    margin-bottom: 15px; /* Espace en bas de l'image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère pour un effet en relief */
+  }
+  
+  /* Styles pour la vidéo */
+  video {
+    width: 100%; /* La vidéo prend toute la largeur disponible */
+    height: auto; /* Conserve le ratio d'aspect de la vidéo */
+    border-radius: 10px; /* Bordures arrondies pour s'harmoniser avec l'image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Même ombre que l'image */
+    margin-top: 20px; /* Espace entre la description et la vidéo */
+  }
+  
+  /* Styles pour la carte contenant l'image et la vidéo */
+  .card {
+    padding: 20px; /* Espace intérieur pour aérer le contenu */
+    background-color: #fff; /* Fond blanc pour la carte */
+    border-radius: 15px; /* Bordures arrondies pour toute la carte */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Ombre pour donner un effet 3D */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour l'animation */
+  }
+  
+  /* Effet au survol de la carte */
+  .card:hover {
+    transform: translateY(-10px); /* Légère élévation au survol */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Augmentation de l'ombre */
+  }
+  
+  /* Style du titre et description */
+  .card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .card-text {
+    font-size: 16px;
+    text-align: justify;
+    color: #555;
+  }
+  

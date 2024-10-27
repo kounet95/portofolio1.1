@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  mysql-db-portofolio:
+    image: mariadb:10.6
+    container_name: mysql-db-portofolio
+    restart: always
+    volumes:
+      - mysql_data:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: db-portofolio
+      MYSQL_USER: kounet
+      MYSQL_PASSWORD: 1234
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
+      timeout: 5s
+      retries: 11
+
+  phpmyadminportofo:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - "9988:80"
+    environment:
+      PMA_HOST: mysql-db-portofolio
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+
+  demo:
+    build: ./demo
+    container_name: demo
+    ports:
+      - '8091:8098'
+    restart: always
+    depends_on:
+      - mysql-db-portofolio
+    environment:
+     # URL JDBC pour H2
+      DB_URL: jdbc:h2:mem:db-portofolio;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+      SPRING_DATASOURCE_DRIVER-CLASS-NAME: org.h2.Driver
+      SPRING_DATASOURCE_USERNAME: sa
+      SPRING_DATASOURCE_PASSWORD: # H2
+      SPRING_JPA_HIBERNATE_DDL-AUTO: update
+      SPRING_JPA_SHOW_SQL: true
+
+  frontportofolio:
+    build: ./front/potofolio-react-app
+    image: front
+    container_name: frontportofolio
+    ports:
+      - '8290:80'
+
+volumes:
+  mysql_data:
+  postgres_data_kounet:
+  pgadmin_data:

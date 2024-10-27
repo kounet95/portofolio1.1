@@ -1,0 +1,185 @@
+:root {
+  --main-color: #2b007a;
+  --secundary-color: #e4e2ea;
+  --cards: #d8ccff;
+
+  --button-flat: #6a00ff;
+  --button-hover: #770fff;
+  --button-active: #6a00ff;
+  --border-color: #9d70ff;
+
+  --text-bold-color: #2b007a;
+  --text-highligth: #770fff;
+
+  --font-montserrat: 'Montserrat Variable', sans-serif;
+
+  /* Couleurs de fond par section */
+  --bg-section-user: #f4f4f4;
+  --bg-section-competence: #d8ccff;
+  --bg-section-contact: #e4e2ea;
+  --bg-section-footer: #2b007a;
+
+  /* Darkmode */
+  --bg-color-dark: #18181b;
+}
+
+/* Styles des cartes de compétence */
+.competence-card {
+  border: 10px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 900px; /* Limite la taille de la carte */
+  width: 100%; /* Prend 100% de la largeur dans la limite du max-width */
+}
+
+.competence-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.competence-header {
+  margin-bottom: 15px;
+}
+
+.competence-title {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.competence-date {
+  color: #777;
+  font-size: 0.9em;
+}
+
+.competence-body {
+  font-size: 1em;
+  color: #555;
+}
+
+.competence-body p {
+  margin: 1px 0;
+}
+
+.competence-video {
+  margin-top: 1px;
+}
+
+/* Barre de recherche */
+.search-bar {
+  position: fixed;
+  top: 10px;
+  right: 0;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 600px; 
+  margin: 10px;
+  z-index: 1000;
+  padding-right: 20px; 
+  padding-top: 20px; 
+}
+
+/* Conteneur de compétences */
+.competence-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2px;
+  flex: 1;
+    position: relative; /* Nécessaire pour positionner le texte défilant */
+    position: absolute;
+    bottom: 0; /* Positionne le texte en bas de la section */
+    left: 0;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: #36306b; /* Couleur de fond pour se distinguer */
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+/* Contrôles de pagination */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Conteneur d'images */
+.image-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  
+}
+
+.image-wrapper {
+  margin: 0 10px;
+}
+
+.framework-image {
+  height: 80px;
+  width: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  
+}
+
+/* Autres styles généraux */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden; /* Pour éviter le débordement */
+}
+
+.user-section {
+  display: flex;
+  flex: 1;
+  padding: 20px;
+  background-color: var(--bg-section-user);
+  border-bottom: 2px solid #bb5353; /* Bordure légère */
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #e0e0e0; /* Couleur de fond pour les compétences */
+  border-radius: 8px; /* Coins arrondis */
+}
+
+.section-title {
+  padding: 20px;
+  background-color: #333; /* Couleur de fond sombre pour le titre */
+  color: #fff; /* Couleur du texte en blanc */
+  text-align: center; /* texte */
+}
+
+.contact-section {
+  padding: 20px;
+  background-color: var(--bg-section-contact);
+  border-top: 2px solid #ddd; /* Bordure  */
+}
+
+.footer-section {
+  padding: 20px;
+  background-color: var(--bg-section-footer);
+  color: white;
+  text-align: center; /*  le texte */
+}
+
+body {
+  background-color: var(--secundary-color);
+  font-family: var(--font-montserrat);
+}
+
+.dark body {
+  background-color: var(--bg-color-dark);
+  color: var(--secundary-color);
+}
