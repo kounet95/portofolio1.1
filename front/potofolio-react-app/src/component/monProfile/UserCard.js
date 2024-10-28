@@ -4,7 +4,8 @@ const UserCard = ({ user }) => {
   return (
     <div className="col-12 col-md-6 col-lg-4 mb-4">
       <div className="card h-1000">
-        <img src={user.userPic} className="card-img-top img-fluid" alt={user.userName} />
+        <img src={user.userPic} className="card-img-top img-fluid" 
+        alt={user.userName} />
 
         <h5 className="card-title">{user.userName}</h5>
         <p className="card-text">{user.userDesc}</p>

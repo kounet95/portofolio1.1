@@ -12,6 +12,33 @@
   align-items: center;
   padding: 20px;
 }
+.competence-list, .outils-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.competence-card, .outil-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.competence-card h3, .outil-card h3 {
+  font-size: 1.25em;
+  color: #333;
+}
+
+.outil-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
 
 .card-body img {
   width: 100px;

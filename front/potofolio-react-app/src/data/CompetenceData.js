@@ -1,4 +1,7 @@
+// LangFramework.js
 import React from 'react';
+import Home from '../component/home/Home'; // Vérifiez si le chemin est correct
+
 const LangFramework = () => {
   const langafrawork = [
     {
@@ -14,6 +17,14 @@ const LangFramework = () => {
       imgUrl: "https://raw.githubusercontent.com/kounet95/portofolio-images/main/java.png",
     },
     {
+      name: "PHP",
+      imgUrl: "https://raw.githubusercontent.com/kounet95/portofolio-images/main/php.png",
+    },
+    {
+      name: "Python",
+      imgUrl: "https://raw.githubusercontent.com/kounet95/portofolio-images/main/python.jpg",
+    },
+    {
       name: "Eco Systeme de Spring",
       imgUrl: "https://raw.githubusercontent.com/kounet95/portofolio-images/main/Eco%20Systeme%20de%20Spring.png",
     },
@@ -24,6 +35,10 @@ const LangFramework = () => {
     {
       name: "Symfony",
       imgUrl: "https://raw.githubusercontent.com/kounet95/portofolio-images/main/symfony.png",
+    },
+    {
+      name: "Node.js",
+      imgUrl: "https://raw.githubusercontent.com/kounet95/portofolio-images/main/node.png",
     },
   ];
 
@@ -37,14 +52,21 @@ const LangFramework = () => {
               <img
                 src={item.imgUrl}
                 alt={item.name}
-                className="card-img-top rounded-circle" 
-                style={{ height: '150px', width: '150px', objectFit: 'cover', margin: 'auto' }} 
+                className="card-img-top rounded-circle"
+                style={{
+                  height: '150px',
+                  width: '150px',
+                  objectFit: 'cover',
+                  margin: 'auto',
+                }}
               />
               <div className="card-body">
                 <h5 className="card-title">{item.name}</h5>
               </div>
-
             </div>
+
+            
+            <Home imagescompetence={langafrawork} />
           </div>
         ))}
       </div>

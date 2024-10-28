@@ -1,54 +1,54 @@
-/* Conteneur principal */
+/* le conteneur principal */
 .container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow: hidden; /* Pour eviter le debordement */
+    overflow: hidden; 
   }
   
-  /* Section Profil Utilisateur et Competences */
+  /* section sur ma presentation et mes Competences */
   .user-section {
     display: flex;
     flex: 1;
     padding: 20px;
-    background-color: #324479; /* Couleur de fond légère pour la section utilisateur */
-    border-bottom: 2px solid #bb5353; /* Bordure légère */
+    background-color: #324479; 
+    border-bottom: 2px solid #bb5353; 
   }
   
-  /* Conteneur pour le profil utilisateur et les compétences */
+  /* pour la presentation de mon profil utilisateur et les competences */
   .user-content {
     background-color: #bb5353;
     display: flex;
     flex: 1;
-    gap: 20px; /* Espace entre les sections */
+    gap: 20px; 
   }
   
-  /* Section de gauche pour le profil utilisateur */
+  /* section de gauche pour le profil utilisateur */
   .left-section {
     flex: 1;
-    background-color: #af2835; /* Fond blanc pour le profil utilisateur */
+    background-color: #af2835; 
     padding: 20px;
-    border-radius: 8px; /* Coins arrondis */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   }
 
   .right-section {
     flex: 1;
-    position: relative; /* Nécessaire pour positionner le texte défilant */
+    position: relative; 
   }
   
   .scrolling-text {
     flex: 1;
-    position: relative; /* Nécessaire pour positionner le texte défilant */
+    position: relative; /*  defilant du texte  */
     position: absolute;
-    bottom: 0; /* Positionne le texte en bas de la section */
+    bottom: 0; 
     left: 0;
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
-    background-color: #36306b; /* Couleur de fond pour se distinguer */
+    background-color: #36306b; 
     padding: 10px 0;
-    box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+    box-sizing: border-box; 
   }
   
   .scrolling-text {
@@ -58,67 +58,67 @@
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
-    background-color: #e1adad; /* Couleur de fond pour se distinguer */
+    background-color: #e1adad;
     padding: 10px;
-    box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+    box-sizing: border-box; 
   }
   
   .scrolling-text-item {
     display: inline-block;
-    padding-right: 10px; /*  pour éviter le chevauchement */
-    font-size: 11px; /*  pour une meilleure lisibilité */
+    padding-right: 10px; /*le chevauchement */
+    font-size: 11px; 
     line-height: 10px; 
   }
   
   @keyframes scroll {
     from {
-      transform: translateX(100%); /* Commence à droite (en dehors de l'écran) */
+      transform: translateX(100%); 
     }
     to {
-      transform: translateX(-100%); /* Termine à gauche (en dehors de l'écran) */
+      transform: translateX(-100%); 
     }
   }
   
   .scrolling-text {
-    animation: scroll 50s linear infinite; /* Augmenter la durée de l'animation pour une lecture complète */
+    animation: scroll 50s linear infinite; 
   }
   .section-title {
     text-align: center;
     margin: 40px 0;
   }
   
-  /* Section de droite pour les compétences en images */
+  /* section de droite pour les compétence en image */
   .right-section {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background-color: #e0e0e0; /* Couleur de fond pour les compétences */
-    border-radius: 8px; /* Coins arrondis */
+    background-color: #e0e0e0; 
+    border-radius: 8px; 
   }
   
-  /* Section de titre */
+  /* section de titre */
   .section-title {
     padding: 20px;
-    background-color: #333; /* Couleur de fond sombre pour le titre */
-    color: #fff; /* Couleur du texte en blanc */
-    text-align: center; /* Centrer le texte */
+    background-color: #333; 
+    color: #fff; 
+    text-align: center; 
   }
   
-  /* Section de formulaire de contact */
+  /* section de formulaire de contact */
   .contact-section {
     padding: 20px;
-    background-color: #ffffff; /* Fond blanc pour le formulaire */
-    border-top: 2px solid #ddd; /* Bordure légère en haut */
+    background-color: #ffffff; 
+    border-top: 2px solid #ddd; 
   }
   
-  /* Section footer */
+  /* section footer */
   .footer-section {
     padding: 20px;
-    background-color: #333; /* Couleur de fond sombre pour le footer */
-    color: #fff; /* Couleur du texte en blanc */
-    text-align: center; /* Centrer le texte */
+    background-color: #333; 
+    color: #fff; 
+    text-align: center; 
   }
   :root {
     --main-color: #2b007a;
@@ -135,17 +135,17 @@
   
     --font-montserrat: 'Montserrat Variable', sans-serif;
   
-    /* Couleurs de fond par section */
+    /* Coloration de fond par section */
     --bg-section-user: #f4f4f4;
     --bg-section-competence: #d8ccff;
     --bg-section-contact: #e4e2ea;
     --bg-section-footer: #2b007a;
   
-    /* Darkmode */
+    
     --bg-color-dark: #18181b;
   }
   
-  /* Application des couleurs de fond */
+  /*  couleurs de fond */
   .user-section {
     background-color: var(--bg-section-user);
     padding: 20px;
@@ -175,5 +175,72 @@
   .dark body {
     background-color: var(--bg-color-dark);
     color: var(--secundary-color);
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .competence-list, .outils-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .competence-card, .outil-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .competence-card h3, .outil-card h3 {
+    font-size: 1.25em;
+    color: #333;
+  }
+  
+  .outil-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+  .outils-list {
+    display: flex;
+    overflow: hidden; 
+    white-space: nowrap;
+    animation: scroll-horizontal 20s linear infinite; 
+  }
+  
+  @keyframes scroll-horizontal {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%); 
+    }
+  }
+  
+  .competence-card, .outil-card {
+    display: inline-block;
+    margin-right: 10px;
+    min-width: 180px;
+  }
+  .competence-list {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    margin: 0 -15px; 
+  }
+  
+  .competence-card {
+    flex: 0 0 calc(33.333% - 30px);
+    margin: 15px; 
+    box-sizing: border-box; 
   }
   
