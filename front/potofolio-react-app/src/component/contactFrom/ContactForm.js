@@ -19,12 +19,12 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Envoi des données du formulaire à l'API
-    axios.post('http://localhost:8082/api/portofolio/addMessage', formData)
+    
+    axios.post('http://138.197.137.215:8082/api/portofolio/addMessage', formData)
       .then(response => {
         console.log('Form submitted successfully', response.data);
         setFormStatus('Message envoyé avec succès !');
-        // Réinitialiser le formulaire
+        
         setFormData({
           name: '',
           email: '',

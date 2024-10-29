@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const competenceUrl = axios.create({
-    baseURL: "http://localhost:8082/api/portofolio/competences",
+    baseURL: "http://138.197.137.215:8082/api/portofolio/competences",
 });
 
 export const getCompetences = (page = 0, size = 3) => {
