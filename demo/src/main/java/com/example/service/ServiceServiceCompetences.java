@@ -49,6 +49,8 @@ public class ServiceServiceCompetences implements InterServiceCompetences {
             existingCompetences.setVideoPresentation(competences.getVideoPresentation());
             existingCompetences.setDescription(competences.getDescription());
             existingCompetences.setLevel(competences.getLevel());
+            existingCompetences.setImage(competences.getImage());
+            existingCompetences.setLienDemo(competences.getLienDemo());
             existingCompetences.setDate(competences.getDate());
 
 

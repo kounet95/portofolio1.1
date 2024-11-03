@@ -12,8 +12,8 @@ import lombok.*;
 @AllArgsConstructor
 public class MessageRequest {
 
-        private String nom ;
-        private String nomEtreprise;
+        private String name ;
+        private String entreprise;
         private String email;
         private String message;
     }

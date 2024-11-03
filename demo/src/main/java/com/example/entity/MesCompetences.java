@@ -17,16 +17,19 @@ public class MesCompetences {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Long id;
-
+    @NotNull(message = "Le champ 'demo' ne doit pas être vide")
+    private String lienDemo;
     @NotNull(message = "Le champ 'languages' ne doit pas être vide")
     private String languages;
 
     @NotNull(message = "Le champ 'framework' ne doit pas être vide")
     private String framework;
+    private String image;
     @NotNull(message = "Le champ 'videoPresentation' ne doit pas être vide")
     private String videoPresentation;
     @NotNull(message = "Le champ 'lienGit' ne doit pas être vide")
     private String lienGit;
+    @Column(length = 1000)
     @NotNull(message = "Le champ 'description' ne doit pas être vide")
     private String description;
     @Temporal(TemporalType.DATE)

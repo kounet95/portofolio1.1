@@ -36,9 +36,9 @@ public class MessageServiceImpl implements InterMessageService {
 
         if (existingMessageOptional.isPresent()) {
             Message existingMessage = existingMessageOptional.get();
-            // Update the fields with the new values
-            existingMessage.setNom(message.getNom());
-            existingMessage.setNomEtreprise(message.getNomEtreprise());
+
+            existingMessage.setName(message.getName());
+            existingMessage.setEntreprise(message.getEntreprise());
             existingMessage.setEmail(message.getEmail());
             existingMessage.setMessage(message.getMessage());
 

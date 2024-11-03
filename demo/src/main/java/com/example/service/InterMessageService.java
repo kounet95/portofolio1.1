@@ -1,7 +1,4 @@
 package com.example.service;
-
-import com.example.dao.EtudeRequestDTO;
-import com.example.dao.EtudeResponseDTO;
 import com.example.dao.MessageRequest;
 import com.example.dao.MessageResponse;
 

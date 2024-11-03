@@ -14,7 +14,9 @@ import java.util.Date;
 @AllArgsConstructor
 public class CompetencesRequestDTO {
     private String languages;
-
+    private String image;
+    @NotNull(message = "Le champ 'demo' ne doit pas être vide")
+    private String lienDemo;
     @NotNull(message = "Le champ 'framework' ne doit pas être vide")
     private String framework;
     @NotNull(message = "Le champ 'videoPresentation' ne doit pas être vide")

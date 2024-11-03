@@ -16,8 +16,8 @@ public class Message {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  long id;
-    private String nom ;
-    private String nomEtreprise;
+    private String name ;
+    private String entreprise;
     private String email;
     private String message;
 }

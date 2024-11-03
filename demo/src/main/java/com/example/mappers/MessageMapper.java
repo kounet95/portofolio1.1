@@ -18,28 +18,28 @@ public class MessageMapper {
         private final List<Message> messagesList = new ArrayList<>();
 
         /**
-         * Convertit un CompetencesRequestDTO en Competences.
+         *un CompetencesRequestDTO en Competences.
          */
         public Message frommessageRequest(MessageRequest messageRequest) {
             return modelMapper.map(messageRequest, Message.class);
         }
 
         /**
-         * Convertit un CompetencesResponseDTO en Competences.
+         * un CompetencesResponseDTO en Competences.
          */
         public Message frommessageResponse(MessageResponse  messageResponse) {
             return modelMapper.map(messageResponse, Message.class);
         }
 
         /**
-         * Convertit un Competences en CompetencesRequestDTO.
+         * un Competences en CompetencesRequestDTO.
          */
         public MessageRequest toMessageRequest(Message message) {
             return modelMapper.map(message,MessageRequest.class);
         }
 
         /**
-         * Convertit un Competences en CompetencesResponseDTO.
+         * un Competences en CompetencesResponseDTO.
          */
         public MessageResponse toMessageResponse(Message message) {
             return modelMapper.map(message, MessageResponse.class);
