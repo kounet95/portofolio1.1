@@ -1,185 +1,152 @@
 :root {
-  --main-color: #2b007a;
-  --secundary-color: #e4e2ea;
-  --cards: #d8ccff;
-
-  --button-flat: #6a00ff;
-  --button-hover: #770fff;
-  --button-active: #6a00ff;
-  --border-color: #9d70ff;
-
-  --text-bold-color: #2b007a;
-  --text-highligth: #770fff;
-
-  --font-montserrat: 'Montserrat Variable', sans-serif;
-
-  /* Couleurs de fond par section */
-  --bg-section-user: #f4f4f4;
-  --bg-section-competence: #d8ccff;
-  --bg-section-contact: #e4e2ea;
-  --bg-section-footer: #2b007a;
-
-  /* Darkmode */
-  --bg-color-dark: #18181b;
+  --main-bg: #f5f5f5;
+  --card-bg: #fff;
+  --border-color: #ddd;
+  --text-color: #333;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Styles des cartes de compétence */
-.competence-card {
-  border: 10px solid #ddd;
-  border-radius: 8px;
+/* Conteneur global */
+.competence-container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 50px auto;
   padding: 20px;
-  margin-bottom: 20px;
-  background-color: #f9f9f9;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+/* Liste de competences alignées en flexbox */
+.competence-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Carte individuelle */
+.competence-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  width: 250px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: var(--shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 900px; /* Limite la taille de la carte */
-  width: 100%; /* Prend 100% de la largeur dans la limite du max-width */
 }
 
 .competence-card:hover {
-  transform: scale(1.02);
+  transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.competence-header {
-  margin-bottom: 15px;
-}
-
+/* Titre */
 .competence-title {
   font-size: 1.5em;
-  color: #333;
+  color: var(--text-color);
+  margin-bottom: 10px;
 }
 
-.competence-date {
-  color: #777;
-  font-size: 0.9em;
-}
-
-.competence-body {
-  font-size: 1em;
+/* Détails */
+.competence-item {
+  margin: 8px 0;
+  font-size: 14px;
   color: #555;
 }
 
-.competence-body p {
-  margin: 1px 0;
+/* Image de competence */
+.competence-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  box-shadow: var(--shadow);
 }
 
-.competence-video {
-  margin-top: 1px;
+/* Liens Git et Demo */
+.competence-git-link a,
+.demo-link {
+  color: #000;
+  margin-left: 5px;
+  font-size: 1.2em;
+  text-decoration: none;
 }
 
-/* Barre de recherche */
-.search-bar {
-  position: fixed;
-  top: 10px;
-  right: 0;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 600px; 
-  margin: 10px;
-  z-index: 1000;
-  padding-right: 20px; 
-  padding-top: 20px; 
+.competence-git-link a:hover,
+.demo-link:hover {
+  color: #007acc;
 }
 
-/* Conteneur de compétences */
-.competence-container {
+/* Vidéo */
+.competence-video video {
+  margin-top: 10px;
+  border-radius: 8px;
+}
+.competences-container {
+  padding: 20px;
+}
+
+.competence-list {
+  margin-bottom: 20px;
+}
+
+.pagination-wrapper {
   display: flex;
   justify-content: center;
-  margin-bottom: 2px;
-  flex: 1;
-    position: relative; /* Nécessaire pour positionner le texte défilant */
-    position: absolute;
-    bottom: 0; /* Positionne le texte en bas de la section */
-    left: 0;
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    background-color: #36306b; /* Couleur de fond pour se distinguer */
-    padding: 10px 0;
-    box-sizing: border-box;
-}
-
-/* Contrôles de pagination */
-.pagination-controls {
-  display: flex;
-  justify-content: center;
+  padding: 20px;
+  border-top: 1px solid #ddd;
   margin-top: 20px;
 }
 
-/* Conteneur d'images */
-.image-container {
+.pagination-controls {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 10px;
-  
 }
 
-.image-wrapper {
-  margin: 0 10px;
+.pagination-controls button {
+  background-color: var(--button-flat);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-controls button:hover {
+  background-color: var(--button-hover);
+}
+
+.pagination-controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+.image-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 20px; 
+  margin-bottom: 20px; 
+  padding-top: 20px; 
 }
 
 .framework-image {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.framework-image:hover {
+  transform: scale(1.1); 
+}
+
+.framework-image img {
   height: 80px;
   width: 80px;
   object-fit: cover;
-  border-radius: 50%;
-  
-}
-
-/* Autres styles généraux */
-.container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  overflow: hidden; /* Pour éviter le débordement */
-}
-
-.user-section {
-  display: flex;
-  flex: 1;
-  padding: 20px;
-  background-color: var(--bg-section-user);
-  border-bottom: 2px solid #bb5353; /* Bordure légère */
-}
-
-.right-section {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  background-color: #e0e0e0; /* Couleur de fond pour les compétences */
-  border-radius: 8px; /* Coins arrondis */
-}
-
-.section-title {
-  padding: 20px;
-  background-color: #333; /* Couleur de fond sombre pour le titre */
-  color: #fff; /* Couleur du texte en blanc */
-  text-align: center; /* texte */
-}
-
-.contact-section {
-  padding: 20px;
-  background-color: var(--bg-section-contact);
-  border-top: 2px solid #ddd; /* Bordure  */
-}
-
-.footer-section {
-  padding: 20px;
-  background-color: var(--bg-section-footer);
-  color: white;
-  text-align: center; /*  le texte */
-}
-
-body {
-  background-color: var(--secundary-color);
-  font-family: var(--font-montserrat);
-}
-
-.dark body {
-  background-color: var(--bg-color-dark);
-  color: var(--secundary-color);
 }

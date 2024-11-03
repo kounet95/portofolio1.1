@@ -27,6 +27,7 @@ const LangFramework = () => {
     {
       name: "Eco Systeme de Spring",
       imgUrl: "https://raw.githubusercontent.com/kounet95/portofolio-images/main/Eco%20Systeme%20de%20Spring.png",
+      
     },
     {
       name: "JavaScript",

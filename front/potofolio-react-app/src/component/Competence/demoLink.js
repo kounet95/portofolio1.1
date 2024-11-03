@@ -1,16 +1,16 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'; // Utilise l'icône de lien externe
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'; 
 
 const DemoLink = () => {
   return (
     <div className="competence-item">
       <strong>Voir La Demo </strong>
       <a 
-        href="https://www.example.com" 
+        href="http://138.197.137.215:82/" 
         target="_blank" 
         rel="noopener noreferrer" 
         className="demo-link"
-        style={{ marginLeft: '10px' }} // Optionnel : espace entre le texte et l'icône
+        style={{ marginLeft: '10px' }} 
       >
         <FontAwesomeIcon icon={faExternalLinkAlt} className="link-icon" />
       </a>
